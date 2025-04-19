@@ -1,5 +1,5 @@
-# Señales Electromiográficas EMG  
- LABORATORIO - 4 PROCESAMIENTO DIGITAL DE SEÑALES
+# Variabilidad de la Frecuencia Cardiaca usando la Transformada Wavelet   
+ LABORATORIO - 5 PROCESAMIENTO DIGITAL DE SEÑALES
 
 ## Requisitos
 - Python 3.12
