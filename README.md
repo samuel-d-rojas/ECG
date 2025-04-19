@@ -24,7 +24,7 @@ from scipy.stats import ttest_rel
 
 _ _ _
 
-## 1) Preparación del Sujeto
+## a. Fundamento teórico
 
 
 _ _ _
