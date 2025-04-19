@@ -26,11 +26,20 @@ _ _ _
 
 ## 1) Preparación del Sujeto
 
+
+_ _ _
 ## b. Adquisición de la señal ECG
 
+
+
+_ _ _
 ## c. Pre-procesamiento de la señal
 
+
+_ _ _
 ## e. Aplicación de transformada Wavelet
+
+
 _ _ _
 
 ## Bibliografias
