@@ -34,6 +34,10 @@ _ _ _
 
 
 _ _ _
+## e. Aplicación de transformada Wavelet
+
+
+_ _ _
 
 ## Bibliografias
 
