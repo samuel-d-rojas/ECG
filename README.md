@@ -30,7 +30,7 @@ _ _ _
 
 
 _ _ _
-## e. Aplicación de transformada Wavelet
+## d. Análisis de la HRV en el dominio del tiempo
 
 
 _ _ _
