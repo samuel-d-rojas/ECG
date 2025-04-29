@@ -149,7 +149,7 @@ plt.ylabel('Intervalo R-R (s)')
 plt.grid()
 ```
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/334731dc-71aa-422c-b9dd-03f9fb394aac" alt="image" width="200">
+    <img src="https://github.com/user-attachments/assets/334731dc-71aa-422c-b9dd-03f9fb394aac" alt="image" width="400">
 </p>
 
 
