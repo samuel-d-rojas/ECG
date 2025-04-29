@@ -99,7 +99,8 @@ Se muestran las primeras 2000 muestras de la señal filtrada.
 </p>
 
 
-### intervalos R-R
+### Intervalos R-R
+#### xd
 
  ```python
 height = 84
