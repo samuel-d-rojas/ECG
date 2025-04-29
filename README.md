@@ -51,7 +51,7 @@ plt.plot(tiempo[:], señal[:],color="r")
     <img src="https://github.com/user-attachments/assets/e062d3cb-64a8-41b9-9579-fd5a4ab1fb72" alt="image" width="400">
 </p>
 
-Este fragmento de codigo carga y grafica una señal de electrocardiograma. Primero, se define la frecuencia de muestreo fs como 400 Hz. Luego, se lee el archivo ecg.txt que contiene los datos del ECG en formato numérico. La señal se convierte de valores digitales a milivoltios utilizando la fórmula (s * 3.3 * 1000) / 4095, donde 3.3V es el voltaje de referencia. Se crea un vector de tiempo que asigna un instante temporal a cada muestra en función de la frecuencia de muestreo. Finalmente, se grafica toda la señal.
+En este codigo se carga y grafica una señal de electrocardiograma. Primero, se define la frecuencia de muestreo fs como 400 Hz. Luego, se lee el archivo ecg.txt que contiene los datos del ECG en formato numérico. La señal se convierte de valores digitales a milivoltios utilizando la fórmula (s * 3.3 * 1000) / 4095, donde 3.3V es el voltaje de referencia. Se crea un vector de tiempo que asigna un instante temporal a cada muestra en función de la frecuencia de muestreo. Finalmente, se grafica toda la señal.
 
  ```python
 plt.figure(figsize=(15, 8))
@@ -159,7 +159,7 @@ plt.grid()
     <img src="https://github.com/user-attachments/assets/334731dc-71aa-422c-b9dd-03f9fb394aac" alt="image" width="400">
 </p>
 
-Este fragmento del código se encarga de graficar la señal basada en los intervalos R-R, que representan las diferencias de tiempo entre los picos R detectados en la señal ECG. La variable t se define como todos los tiempos de los picos R, excepto el primero (t_picos[1:]), ya que este primer pico no corresponde a un verdadero pico R, sino que posiblemente es un artefacto generado por la respuesta inicial del filtro IIR. A continuación, se genera una gráfica donde el eje X representa el instante de tiempo en el que ocurre cada pico R y el eje Y muestra la duración del intervalo R-R correspondiente. Esta visualización permite analizar la variabilidad del ritmo cardíaco a lo largo del tiempo.
+Esta parte del código se encarga de graficar la señal basada en los intervalos R-R, que representan las diferencias de tiempo entre los picos R detectados en la señal ECG. La variable t se define como todos los tiempos de los picos R, excepto el primero (t_picos[1:]), ya que este primer pico no corresponde a un verdadero pico R, sino que posiblemente es un artefacto generado por la respuesta inicial del filtro IIR. A continuación, se genera una gráfica donde el eje X representa el instante de tiempo en el que ocurre cada pico R y el eje Y muestra la duración del intervalo R-R correspondiente. Esta visualización permite analizar la variabilidad del ritmo cardíaco a lo largo del tiempo.
 
 
 _ _ _
