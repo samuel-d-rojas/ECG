@@ -129,6 +129,8 @@ plt.grid()
     <img src="https://github.com/user-attachments/assets/0bfd822f-2777-4e32-9b5a-dac5aa7d92e7" alt="image" width="400">
 </p>
 
+Este fragmento de código se utiliza para detectar y marcar los picos R en la señal ECG filtrada. Se definen dos parámetros clave: height, que establece el umbral mínimo de altura para que un valor sea considerado un pico (en este caso, 84 mV), y distance, que determina la distancia mínima entre picos, establecida en fs * 0.1 para asegurar que los picos estén suficientemente separados. Usando la función find_peaks, se identifican los índices de los picos R en la señal, y luego se calcula el tiempo de cada pico dividiendo estos índices por la frecuencia de muestreo fs. Además, se calculan los intervalos entre los picos en segundos. Finalmente, se grafica la señal ECG filtrada y se destacan los picos R detectados con puntos rojos.
+
  ```python
 peaks, _ = find_peaks(señal_filtrada[:2000], height=height, distance=distance)
 
@@ -156,6 +158,8 @@ plt.grid()
 <p align="center">
     <img src="https://github.com/user-attachments/assets/334731dc-71aa-422c-b9dd-03f9fb394aac" alt="image" width="400">
 </p>
+
+Ahora se grafican los intervalos R-R, que representan el tiempo entre dos latidos sucesivos del corazón. Para ello, primero se genera un arreglo llamado latidos, que contiene una secuencia de números que corresponden al número de latidos, basado en el número de intervalos calculados. Luego, se crea una gráfica donde el eje x representa el número de latidos y el eje y muestra los intervalos R-R en segundos.
 
 
 _ _ _
