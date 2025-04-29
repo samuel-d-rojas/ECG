@@ -194,7 +194,7 @@ Este fragmento de código realiza cálculos estadísticos sobre los intervalos R
 Esto indica que, en promedio, hay aproximadamente 0.7358 segundos entre cada latido, lo que equivale a una frecuencia cardíaca promedio de aproximadamente 81.5 latidos por minuto (bpm), calculada como:
 
 $$
-\frac{60}{0.7358}
+\frac{60}{0.7358} = 81.5
 $$
 
 Este valor se encuentra dentro del rango normal en reposo (60–100 bpm), lo que sugiere un ritmo cardíaco saludable.
