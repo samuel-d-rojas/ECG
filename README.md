@@ -5,7 +5,7 @@
 - Python 3.12
 - STM32 CubeMX Y CubeIDE
 - MATLAB
- - Bibliotecas necesarias Python:
+## Bibliotecas necesarias Python:
   - numpy
   - matplotlib
   - scipy
