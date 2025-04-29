@@ -3,8 +3,9 @@
 
 ## Requisitos
 - Python 3.12
-- Bibliotecas necesarias:
-  - nidaqmx
+- STM32 CubeMX Y CubeIDE
+- MATLAB
+ - Bibliotecas necesarias Python:
   - numpy
   - matplotlib
   - scipy
