@@ -63,7 +63,7 @@ Se muestran las primeras 2000 muestras de la señal.
 
 
 
-
+___
 ### Filtros Digitales
 
  ```python
@@ -98,7 +98,7 @@ Se muestran las primeras 2000 muestras de la señal filtrada.
     <img src="https://github.com/user-attachments/assets/86dc153e-a8e9-49d8-baf6-4555f6455988" alt="image" width="400">
 </p>
 
-
+___
 ### Intervalos R-R
 
 
