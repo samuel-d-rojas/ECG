@@ -29,6 +29,18 @@ _ _ _
 _ _ _
 ## c. Pre-procesamiento de la señal
 
+### Cargar Señal de ECG
+
+ ```python
+fs = 400
+s = np.loadtxt("ecg.txt")
+señal = (s*3.3*1000)/4095 #conversion a mv
+tiempo = (np.arange(len(señal)) / fs)
+
+plt.figure(figsize=(15, 8))
+plt.plot(tiempo[:], señal[:],color="r")
+```
+
 ### Filtros Digitales
 
 ### intervalos R-R
