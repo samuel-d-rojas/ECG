@@ -168,16 +168,18 @@ print('Media de los Intervalos R-R:', round(media, 4) , "segundos")
 print('Desviación Estandar de los Intervalos R-R:', round(desviacion, 4), "segundos")
 print("RMSSD:", round(rmssd, 4), "segundos")
 ```
-
-\[
+$$
 \text{Media de los Intervalos R-R:} \ 0.793 \ \text{segundos}
-\]
-\[
+$$
+
+$$
 \text{Desviación Estándar de los Intervalos R-R:} \ 0.1367 \ \text{segundos}
-\]
-\[
+$$
+
+$$
 \text{RMSSD:} \ 0.1065 \ \text{segundos}
-\]
+$$
+
 
 
 _ _ _
