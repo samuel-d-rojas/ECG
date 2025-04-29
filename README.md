@@ -29,9 +29,9 @@ _ _ _
 _ _ _
 ## c. Pre-procesamiento de la señal
 
-# Filtros Digitales
+#Filtros Digitales
 
-# intervalos R-R
+#intervalos R-R
 
 _ _ _
 ## d. Análisis de la HRV en el dominio del tiempo
