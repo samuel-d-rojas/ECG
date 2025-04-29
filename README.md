@@ -100,7 +100,7 @@ Se muestran las primeras 2000 muestras de la señal filtrada.
 
 
 ### Intervalos R-R
-#### xd
+
 
  ```python
 height = 84
@@ -134,6 +134,21 @@ Se muestran las primeras 2000 muestras de la señal filtrada con los picos R.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/61f85d40-4613-473f-8230-26d0bc8c8390" alt="image" width="400">
+</p>
+#### Señal Obtenidad Apartir de los Intervalos R-R
+
+ ```python
+latidos = np.arange(1, len(intervalo)+1)
+
+plt.figure(figsize=(15, 8))
+plt.plot(latidos, intervalo, marker='o', linestyle='-', color='k')
+plt.title('Señal Basada en Intervalos R-R')
+plt.xlabel('Número de Latidos')
+plt.ylabel('Intervalo R-R (s)')
+plt.grid()
+```
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/334731dc-71aa-422c-b9dd-03f9fb394aac" alt="image" width="200">
 </p>
 
 
