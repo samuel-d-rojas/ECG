@@ -78,9 +78,9 @@ señal_filtrada = filtro(fs, señal)
 plt.figure(figsize=(15, 8))
 plt.plot(tiempo[:], señal_filtrada[:], color="b")
 ```
-$
+$$
 y[n] = 0.288\, x[n] + 0.00\, x[n-1] + 1.414\, y[n-1]
-$
+$$
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/8371c896-1ab2-4246-989a-d33b9380647d" alt="image" width="400">
@@ -169,9 +169,16 @@ print('Desviación Estandar de los Intervalos R-R:', round(desviacion, 4), "segu
 print("RMSSD:", round(rmssd, 4), "segundos")
 ```
 
-\text{Media de los Intervalos R-R:} &\ 0.793 \text{ segundos} \\
-\text{Desviación Estándar de los Intervalos R-R:} &\ 0.1367 \text{ segundos} \\
-\text{RMSSD:} &\ 0.1065 \text{ segundos}
+\[
+\text{Media de los Intervalos R-R:} \ 0.793 \ \text{segundos}
+\]
+\[
+\text{Desviación Estándar de los Intervalos R-R:} \ 0.1367 \ \text{segundos}
+\]
+\[
+\text{RMSSD:} \ 0.1065 \ \text{segundos}
+\]
+
 
 _ _ _
 ## e. Aplicación de transformada Wavelet
