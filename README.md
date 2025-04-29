@@ -135,6 +135,7 @@ Se muestran las primeras 2000 muestras de la señal filtrada con los picos R.
 <p align="center">
     <img src="https://github.com/user-attachments/assets/61f85d40-4613-473f-8230-26d0bc8c8390" alt="image" width="400">
 </p>
+
 #### Señal Obtenidad Apartir de los Intervalos R-R
 
  ```python
