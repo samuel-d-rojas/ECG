@@ -156,6 +156,18 @@ plt.grid()
 _ _ _
 ## d. Análisis de la HRV en el dominio del tiempo
 
+ ```python
+diffs = np.diff(intervalo)
+squared_diffs = diffs ** 2
+mean_squared_diffs = np.mean(squared_diffs)
+rmssd = np.sqrt(mean_squared_diffs)
+media = np.mean(intervalo)
+desviacion = np.std(intervalo, ddof=1)
+
+print('Media de los Intervalos R-R:', round(media, 4) , "segundos")
+print('Desviación Estandar de los Intervalos R-R:', round(desviacion, 4), "segundos")
+print("RMSSD:", round(rmssd, 4), "segundos")
+```
 
 _ _ _
 ## e. Aplicación de transformada Wavelet
