@@ -48,10 +48,13 @@ plt.figure(figsize=(15, 8))
 plt.plot(tiempo[:], señal[:],color="r")
 ```
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/e062d3cb-64a8-41b9-9579-fd5a4ab1fb72" alt="image" width="200">
+    <img src="https://github.com/user-attachments/assets/e062d3cb-64a8-41b9-9579-fd5a4ab1fb72" alt="image" width="400">
 </p>
 
-
+ ```python
+plt.figure(figsize=(15, 8))
+plt.plot(tiempo[:2000], señal[:2000],color="r")
+```
 <p align="center">
     <img src="https://github.com/user-attachments/assets/c47169de-8cbf-46f9-b85e-9a7aa3316ed3" alt="image" width="400">
 </p>
