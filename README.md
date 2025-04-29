@@ -31,7 +31,7 @@ _ _ _
 
 ### Filtros Digitales
 
-#intervalos R-R
+### intervalos R-R
 
 _ _ _
 ## d. Análisis de la HRV en el dominio del tiempo
