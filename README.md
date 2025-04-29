@@ -83,7 +83,7 @@ y[n] = 0.288\, x[n] + 0.00\, x[n-1] + 1.414\, y[n-1]
 $$
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/8371c896-1ab2-4246-989a-d33b9380647d" alt="image" width="200">
+    <img src="https://github.com/user-attachments/assets/8371c896-1ab2-4246-989a-d33b9380647d" alt="image" width="400">
 </p>
 
 
@@ -95,7 +95,7 @@ plt.plot(tiempo[:2000], señal_filtrada[:2000], color="b")
 Se muestran las primeras 2000 muestras de la señal filtrada.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/86dc153e-a8e9-49d8-baf6-4555f6455988" alt="image" width="200">
+    <img src="https://github.com/user-attachments/assets/86dc153e-a8e9-49d8-baf6-4555f6455988" alt="image" width="400">
 </p>
 
 
