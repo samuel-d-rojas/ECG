@@ -169,6 +169,10 @@ print('Desviación Estandar de los Intervalos R-R:', round(desviacion, 4), "segu
 print("RMSSD:", round(rmssd, 4), "segundos")
 ```
 
+\text{Media de los Intervalos R-R:} &\ 0.793 \text{ segundos} \\
+\text{Desviación Estándar de los Intervalos R-R:} &\ 0.1367 \text{ segundos} \\
+\text{RMSSD:} &\ 0.1065 \text{ segundos}
+
 _ _ _
 ## e. Aplicación de transformada Wavelet
 
