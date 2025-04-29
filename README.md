@@ -78,9 +78,9 @@ señal_filtrada = filtro(fs, señal)
 plt.figure(figsize=(15, 8))
 plt.plot(tiempo[:], señal_filtrada[:], color="b")
 ```
-\begin{equation}
+$$
 y[n] = 0.288\, x[n] + 0.00\, x[n-1] + 1.414\, y[n-1]
-\end{equation}
+$$
 
 
 
