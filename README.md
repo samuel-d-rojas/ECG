@@ -191,10 +191,12 @@ $$
 
 Este fragmento de código realiza cálculos estadísticos sobre los intervalos R-R de la señal ECG, con el objetivo de analizar la variabilidad en los tiempos entre latidos. Para ello, se calcula la media y la desviación estándar de los intervalos R-R, proporcionando una visión general del valor promedio de los intervalos y de la dispersión de estos. Además, se calcula el RMSSD (Root Mean Square of Successive Differences), una medida que evalúa los cambios rápidos en la variabilidad de los intervalos. Un valor mayor de RMSSD indica que el corazón es más capaz de adaptarse a cambios rápidos.
 
-Esto indica que, en promedio, hay aproximadamente 0.7358 segundos entre cada latido, lo que equivale a una frecuencia cardíaca promedio de aproximadamente 81.5 latidos por minuto (bpm), calculada como 
+Esto indica que, en promedio, hay aproximadamente 0.7358 segundos entre cada latido, lo que equivale a una frecuencia cardíaca promedio de aproximadamente 81.5 latidos por minuto (bpm), calculada como:
+
 $$
-60/0.7358
-$$.
+\frac{60}{0.7358}
+$$
+
 Este valor se encuentra dentro del rango normal en reposo (60–100 bpm), lo que sugiere un ritmo cardíaco saludable.
 
 La desviación estándar obtenida refleja una variabilidad moderada en los intervalos entre latidos. Un valor más alto podría indicar un ritmo irregular, aunque también puede interpretarse como una buena capacidad de adaptación del corazón a diferentes situaciones, como cambios posturales, respiración o estrés. Por otro lado, una desviación estándar muy baja podría sugerir rigidez en la respuesta del sistema nervioso autónomo. En este caso, el valor indica una variabilidad fisiológica razonable, lo que también es señal de una buena regulación del ritmo cardíaco.
