@@ -99,9 +99,42 @@ Se muestran las primeras 2000 muestras de la señal filtrada.
 </p>
 
 
-
-
 ### intervalos R-R
+
+ ```python
+height = 84
+distance = fs * 0.1
+peaks, _ = find_peaks(señal_filtrada[:], height=height, distance=distance)
+t_picos = peaks / fs
+intervalo = np.diff(t_picos)
+peaks = peaks[1:]
+intervalo = intervalo[1:]
+
+plt.figure(figsize=(15, 8))
+plt.plot(tiempo[:], señal_filtrada[:], label='ECG filtrado', color='b')
+plt.title('ECG, Picos R')
+plt.plot(tiempo[peaks], señal_filtrada[peaks], 'ro', label='Picos R detectados')
+plt.legend()
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Voltaje (mv)')
+plt.grid()
+```
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/0bfd822f-2777-4e32-9b5a-dac5aa7d92e7" alt="image" width="400">
+</p>
+
+ ```python
+peaks, _ = find_peaks(señal_filtrada[:2000], height=height, distance=distance)
+
+plt.figure(figsize=(15, 8))
+plt.plot(tiempo[:2000], señal_filtrada[:2000], label='ECG filtrado', color='b')
+```
+Se muestran las primeras 2000 muestras de la señal filtrada con los picos R.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/61f85d40-4613-473f-8230-26d0bc8c8390" alt="image" width="400">
+</p>
+
 
 _ _ _
 ## d. Análisis de la HRV en el dominio del tiempo
