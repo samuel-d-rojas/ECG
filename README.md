@@ -146,12 +146,12 @@ Se muestran las primeras 2000 muestras de la señal filtrada con los picos R.
 #### Señal Obtenida Apartir de los Intervalos R-R
 
  ```python
-latidos = np.arange(1, len(intervalo)+1)
+t = t_picos[1:]
 
 plt.figure(figsize=(15, 8))
-plt.plot(latidos, intervalo, marker='o', linestyle='-', color='k')
+plt.plot(t[:-1], intervalo, marker='o', linestyle='-', color='k')
 plt.title('Señal Basada en Intervalos R-R')
-plt.xlabel('Número de Latidos')
+plt.xlabel('Tiempo en el que Sucede Cada Pico R (s)')
 plt.ylabel('Intervalo R-R (s)')
 plt.grid()
 ```
@@ -159,7 +159,7 @@ plt.grid()
     <img src="https://github.com/user-attachments/assets/334731dc-71aa-422c-b9dd-03f9fb394aac" alt="image" width="400">
 </p>
 
-Ahora se grafican los intervalos R-R, que representan el tiempo entre dos latidos sucesivos del corazón. Para ello, primero se genera un arreglo llamado latidos, que contiene una secuencia de números que corresponden al número de latidos, basado en el número de intervalos calculados. Luego, se crea una gráfica donde el eje x representa el número de latidos y el eje y muestra los intervalos R-R en segundos.
+Este fragmento del código se encarga de graficar la señal basada en los intervalos R-R, que representan las diferencias de tiempo entre los picos R detectados en la señal ECG. La variable t se define como todos los tiempos de los picos R, excepto el primero (t_picos[1:]), ya que este primer pico no corresponde a un verdadero pico R, sino que posiblemente es un artefacto generado por la respuesta inicial del filtro IIR. A continuación, se genera una gráfica donde el eje X representa el instante de tiempo en el que ocurre cada pico R y el eje Y muestra la duración del intervalo R-R correspondiente. Esta visualización permite analizar la variabilidad del ritmo cardíaco a lo largo del tiempo.
 
 
 _ _ _
