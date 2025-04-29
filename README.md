@@ -55,6 +55,8 @@ plt.plot(tiempo[:], señal[:],color="r")
 plt.figure(figsize=(15, 8))
 plt.plot(tiempo[:2000], señal[:2000],color="r")
 ```
+Se muestran las primeras 2000 muestras de la señal.
+
 <p align="center">
     <img src="https://github.com/user-attachments/assets/c47169de-8cbf-46f9-b85e-9a7aa3316ed3" alt="image" width="400">
 </p>
@@ -63,6 +65,24 @@ plt.plot(tiempo[:2000], señal[:2000],color="r")
 
 
 ### Filtros Digitales
+
+ ```python
+def filtro(fs, señal):
+    b, a = butter(1, [1 / (fs / 2), 50 / (fs / 2)], btype='band')
+    eq = f"y[n] = ({b[0]:.3f} * x[n] + {b[1]:.1f} * x[n-1] - {a[1]:.3f} * y[n-1])"
+    
+    print("Ecuación en diferencias:", eq)
+    return lfilter(b, a, señal)
+
+señal_filtrada = filtro(fs, señal)
+plt.figure(figsize=(15, 8))
+plt.plot(tiempo[:], señal_filtrada[:], color="b")
+```
+\begin{equation}
+y[n] = 0.288\, x[n] + 0.00\, x[n-1] + 1.414\, y[n-1]
+\end{equation}
+
+
 
 ### intervalos R-R
 
