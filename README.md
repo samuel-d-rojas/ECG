@@ -27,7 +27,6 @@ En el presente laboratorio, se realiza un estudio detallado de la HRV empleando 
 <p align="center">
     <img src="Blank board.png" alt="imagen" width="400">
 </p>
-_ _ _
 
 ## a. Fundamento teórico
 
