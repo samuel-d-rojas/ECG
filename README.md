@@ -41,7 +41,7 @@ _ _ _
   sp = serialport("COM5",115200);
     sp.Timeout = 1;
     flush(sp);
-    fid = fopen("SAMUEL01.txt","w");
+    fid = fopen("ecg.txt","w");
    T = 300;     
     t0 = tic;
     buf = zeros(1,500,"uint8");
