@@ -103,7 +103,7 @@ ___
 
  ```python
 def filtro(fs, señal):
-    b, a = butter(1, [1 / (fs / 2), 50 / (fs / 2)], btype='band')
+    b, a = butter(1, [1 / (fs / 2), 160 / (fs / 2)], btype='band')
     eq = f"y[n] = ({b[0]:.3f} * x[n] + {b[1]:.1f} * x[n-1] - {a[1]:.3f} * y[n-1])"
     
     print("Ecuación en diferencias:", eq)
@@ -121,7 +121,7 @@ $$
     <img src="https://github.com/user-attachments/assets/8371c896-1ab2-4246-989a-d33b9380647d" alt="image" width="400">
 </p>
 
-Este código aplica un filtro pasa banda de Butterworth de primer orden a la señal ECG, eliminando el ruido fuera del rango de 1 a 100 Hz. Se grafica la señal resultante en color azul, permitiendo visualizar la señal ya filtrada. Se seleccionó este rango de frecuencias porque abarca la actividad cardíaca más importante, incluyendo las ondas P, QRS y T, que son fundamentales para el análisis del ritmo cardíaco.
+Este código aplica un filtro pasa banda de Butterworth de primer orden a la señal ECG, eliminando el ruido fuera del rango de 1 a 160 Hz. Se grafica la señal resultante en color azul, permitiendo visualizar la señal ya filtrada. Se seleccionó este rango de frecuencias porque abarca la actividad cardíaca más importante, incluyendo las ondas P, QRS y T, que son fundamentales para el análisis del ritmo cardíaco.
 Se utilizó un filtro de primer orden debido a que la señal original no contenía demasiado ruido. Además, debido a que se trata de un filtro IIR, aumentar el orden podría provocar un comportamiento inestable, lo que afectaría significativamente la señal de salida.
 Finalmente, se muestra la ecuación en diferencias del filtro. Al ser de primer orden la ecuación es relativamente sencilla, lo que facilita su implementación.
 
