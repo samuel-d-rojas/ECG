@@ -30,7 +30,18 @@ _ _ _
 
 _ _ _
 ## b. Adquisición de la señal ECG
+
+  ```MATLAB
+  sp = serialport("COM5",115200);
+    sp.Timeout = 1;
+    flush(sp);
+    fid = fopen("SAMUEL01.txt","w");
+   T = 300;     
+    t0 = tic;
+    buf = zeros(1,500,"uint8");
+```
 Para la adquisicion de la señal se utilizo el microcontrolador stm32f103c8t6 el cual se le pogramo la comunicacion serial y el ADC atravez de STM32 CubeIde y Cube MX , en el cual se planteo el Timer (Frecuencia de muestreo (400Hz)),y Baud Rate (115200 bps) el cual es favorece en la calidad de los datos capturados es importante "Es importante configurar la misma cantidad de Baudios en CubeMX y en MATLAB".Despues de esto ya puede pogrmar la captura de la señal en MATLAB atravez de la comunicacion serial
+
   ```MATLAB
     while toc(t0)<T
 % Leer,filtrar y guadar los datos
