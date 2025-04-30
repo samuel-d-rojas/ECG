@@ -30,7 +30,24 @@ _ _ _
 
 _ _ _
 ## b. Adquisición de la señal ECG
-
+Para la adquisicion de la señal se utilizo el microcontrolador stm32f103c8t6 el cual se le pogramo la comunicacion serial y el ADC atravez de STM32 CubeIde y Cube MX , en el cual se planteo el Timer (Frecuencia de muestreo (400Hz)),y Baud Rate (115200 bps) el cual es favorece en la calidad de los datos capturados es importante "Es importante configurar la misma cantidad de Baudios en CubeMX y en MATLAB".Despues de esto ya puede pogrmar la captura de la señal en MATLAB atravez de la comunicacion serial
+  ```MATLAB
+    while toc(t0)<T
+% Leer,filtrar y guadar los datos
+        n = sp.NumBytesAvailable;
+        if n>0
+            datos = read(sp,n,"uint8");
+            fprintf(fid,"%u\n",datos);
+            buf = [buf(length(datos)+1:end), datos];
+            filt = movmean(buf,5);
+        end
+        % Graficar Señal Suavizada
+        set(hRaw, "YData", buf);
+        set(hFilt,"YData", filt);
+        drawnow limitrate
+    end
+```
+A través de este bucle realizamos la captura y visualización en tiempo real de la señal: cada vez que llegan nuevas muestras del ECG, se guardan en el archivo y se incorporan al buffer; luego las suavizamos con un promedio móvil (filtro que reemplaza cada punto por el promedio de él y sus próximos puntos) de cinco muestras para eliminar el ruido de alta frecuencia, y finalmente actualizamos la gráfica al instante para ver cómo evoluciona la señal.
 
 
 _ _ _
