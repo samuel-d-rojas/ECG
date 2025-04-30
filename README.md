@@ -25,7 +25,7 @@ La variabilidad de la frecuencia cardíaca (HRV) es un parámetro fisiológico d
 En el presente laboratorio, se realiza un estudio detallado de la HRV empleando la transformada wavelet, una técnica que permite observar cómo varían las componentes frecuenciales de la señal en función del tiempo. La práctica se estructura en varias etapas planteadas en el siguiente diagrama de flujo:
 
 <p align="center">
-    <img src="" alt="imagen" width="200">
+    <img src="Blank board.png" alt="imagen" width="200">
 </p>
 _ _ _
 
