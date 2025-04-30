@@ -30,6 +30,9 @@ En el presente laboratorio, se realiza un estudio detallado de la HRV empleando 
 
 ## a. Fundamento teórico
 
+## - Sistema Nervioso Autónomo: Actividad Simpática y Parasimpática
+## - Variabilidad de la Frecuencia Cardíaca (HRV)
+## - Transformada Wavelet
 
 _ _ _
 ## b. Adquisición de la señal ECG
