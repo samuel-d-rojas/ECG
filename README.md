@@ -23,11 +23,11 @@ from scipy.signal import cwt, ricker
 La variabilidad de la frecuencia cardíaca (HRV) es un parámetro fisiológico de gran relevancia en la evaluación no invasiva de la función del sistema nervioso autónomo. A través del análisis de las fluctuaciones en los intervalos entre latidos consecutivos del corazón (intervalos R-R), es posible inferir la influencia relativa de las ramas simpática y parasimpática sobre la actividad cardíaca. 
 
 En el presente laboratorio, se realiza un estudio detallado de la HRV empleando la transformada wavelet, una técnica que permite observar cómo varían las componentes frecuenciales de la señal en función del tiempo. La práctica se estructura en varias etapas planteadas en el siguiente diagrama de flujo:
-_ _ _
+
 <p align="center">
     <img src="Blank board.png" alt="imagen" width="400">
 </p>
-
+_ _ _
 
 ## a. Fundamento teórico
 
