@@ -20,9 +20,9 @@ from scipy.signal import cwt, ricker
 
  _ _ _
 ## Introducción
-La variabilidad de la frecuencia cardíaca (HRV) representa una medida esencial para evaluar el estado de regulación del corazón por parte del sistema nervioso autónomo, en donde se equilibran las respuestas simpáticas y parasimpáticas. Analizar estas variaciones permite observar cómo el cuerpo responde a diferentes condiciones fisiológicas y detectar posibles disfunciones. En este laboratorio, se analizará el comportamiento de la HRV utilizando la transformada wavelet. Esta técnica permite descomponer la señal cardíaca y observar su evolución en el tiempo y en diferentes escalas de frecuencia.
+La variabilidad de la frecuencia cardíaca (HRV) es un parámetro fisiológico de gran relevancia en la evaluación no invasiva de la función del sistema nervioso autónomo. A través del análisis de las fluctuaciones en los intervalos entre latidos consecutivos del corazón (intervalos R-R), es posible inferir la influencia relativa de las ramas simpática y parasimpática sobre la actividad cardíaca. 
 
-La práctica incluirá la recolección de señales ECG en estado de reposo y condiciones controladas, su posterior limpieza mediante filtros digitales, la extracción de intervalos R-R y el análisis cuantitativo de los datos en el dominio del tiempo y tiempo-frecuencia.
+En el presente laboratorio, se realiza un estudio detallado de la HRV empleando la transformada wavelet, una técnica que permite observar cómo varían las componentes frecuenciales de la señal en función del tiempo. La práctica se estructura en varias etapas planteadas en el siguiente diagrama de flujo:
 _ _ _
 
 ## a. Fundamento teórico
