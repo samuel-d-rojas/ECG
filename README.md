@@ -114,7 +114,7 @@ plt.figure(figsize=(15, 8))
 plt.plot(tiempo[:], señal_filtrada[:], color="b")
 ```
 $$
-y[n] = 0.496 * x[n] + 0.00 * x[n-1] - 0.992 * y[n-1]
+y[n] = 0.750 * x[n] + 0.00 * x[n-1] - 0.477 * y[n-1]
 $$
 
 <p align="center">
@@ -214,15 +214,15 @@ print("RMSSD:", round(rmssd, 4), "segundos")
 Este fragmento de código realiza cálculos estadísticos sobre los intervalos R-R de la señal ECG, con el objetivo de analizar la variabilidad en los tiempos entre latidos. Para ello, se calcula la media y la desviación estándar de los intervalos R-R, proporcionando una visión general del valor promedio de los intervalos y de la dispersión de estos. Además, se calcula el RMSSD (Root Mean Square of Successive Differences), una medida que evalúa los cambios rápidos en la variabilidad de los intervalos. Un valor mayor de RMSSD indica que el corazón es más capaz de adaptarse a cambios rápidos.
 
 $$
-\text{Media de los Intervalos R-R:} \ 0.7358 \ \text{segundos}
+\text{Media de los Intervalos R-R:} \ 0.793 \ \text{segundos}
 $$
 
 $$
-\text{Desviación Estándar de los Intervalos R-R:} \ 0.0967 \ \text{segundos}
+\text{Desviación Estándar de los Intervalos R-R:} \ 0.1366 \ \text{segundos}
 $$
 
 $$
-\text{RMSSD:} \ 0.1203 \ \text{segundos}
+\text{RMSSD:} \ 0.106 \ \text{segundos}
 $$
 
 
