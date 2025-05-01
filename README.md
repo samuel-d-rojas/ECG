@@ -323,11 +323,17 @@ plt.axhline(0.15, color='k', linestyle='--', label='LF (0.04-0.15 Hz)')
 plt.axhline(0.4, color='w', linestyle='--', label='HF (0.15-0.4 Hz)')
 plt.legend()
 ```
-Poateriormente se crea una figura con dos espectrogramas del análisis HRV usando wavelets Morlet y Mexican Hat. En cada subplot se visualizan los coeficientes de la transformada como imágenes en función del tiempo y la frecuencia, destacando las bandas LF (0.04–0.15 Hz) y HF (0.15–0.4 Hz). 
+Posteriormente se crea una figura con dos espectrogramas del análisis HRV usando wavelets Morlet y Mexican Hat. En cada subplot se visualizan los coeficientes de la transformada como imágenes en función del tiempo y la frecuencia, destacando las bandas LF (0.04–0.15 Hz) y HF (0.15–0.4 Hz). 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/85288a4a-d71b-4bb5-8d34-c4fd0ae43b86" alt="image" width="400">
+    <img src="https://github.com/user-attachments/assets/85288a4a-d71b-4bb5-8d34-c4fd0ae43b86" alt="image" width="500">
 </p>
+
+Las gráficas de espectrogramas obtenidas mediante transformadas wavelet (Morlet y Mexican Hat) permiten observar cómo varía la potencia espectral de la señal de intervalos R-R a lo largo del tiempo, en distintas bandas de frecuencia relevantes para el análisis de HRV. Según la teoría, las bandas de interés son:
+
+* Baja Frecuencia (LF): 0.04 - 0.15 Hz, asociada a una combinación de actividad simpática y parasimpática (con predominio simpático).
+
+* Alta Frecuencia (HF): 0.15 - 0.4 Hz, reflejo directo de la actividad parasimpática (vagal), vinculada a la respiración.
 
 _ _ _
 
