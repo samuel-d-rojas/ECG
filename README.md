@@ -45,17 +45,42 @@ Wavelet Mexican Hat (Ricker): Es eficaz para detectar picos y transiciones abrup
 Al extraer los intervalos R-R y analizarlos con la transformada wavelet, se puede observar cómo las bandas LF y HF evolucionan en el tiempo. Esto permite detectar de forma precisa transiciones fisiológicas, como cambios de postura, respiración controlada o respuesta al estrés. El uso de wavelets en el análisis de HRV proporciona una caracterización rica y detallada del comportamiento autonómico, permitiendo la evaluación de la dinámica simpático-parasimpática en condiciones fisiológicas o patológicas [4].
 _ _ _
 ## b. Adquisición de la señal ECG
+Para adquirir la señal, se empleó el microcontrolador STM32F103C8T6, al cual se le programó el ADC y la comunicación serial mediante STM32CubeIDE y CubeMX. En esta configuración se definió una frecuencia de muestreo de 400 Hz y se estableció un baud rate de 115 200 bps, (En caso de USART el  de Baud Rate valor que debe coincidir exactamente tanto en CubeMX como en MATLAB para garantizar la integridad y sincronía de los datos.)
+$f_{\text{s}} = \frac{f_{\text{TIM3CLK}}}{(\text{Prescaler} + 1) \times (\text{Period} + 1)}$
+A través de la Anterior  formula pudimos hallar el prescaler a una frecuencia de muestreo de 400Hz, asumiendo un periodo de 999 y sabiendo que TIM3CLICK es de 72MHz que es el máximo valor con el que trabaja la stm32f103c8t6, y así se pudo programar en STM32 CubeIDE 
+  ```C
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 179;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 999;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+```
+Y por último se configuro de la transmisión a través de USB con el siguiente código donde pasamos los datos del ADC de 12 bits a 8bits para facilitar la comunicación 
+  ```C
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == htim3.Instance) {
+        uint8_t v1 = (uint8_t)(ReadADC1[0] * 255 / 4095); 
+        datos[0] = v1;
+        CDC_Transmit_FS(datos, sizeof(datos)); //Enviar Datos
+    }
+}
+```
+Después pasamos a Matlab:
+Este bloque en MATLAB prepara la lectura de la señal enviada por el STM32: primero abre el puerto serie "COM5" a 115 200 bps con serialport, luego fija un tiempo de espera de 1 s para las lecturas y limpia cualquier dato residual del buffer con flush. A continuación crea (o sobreescribe) el archivo "SAMUEL01.txt" para almacenar las muestras recibidas. Para controlar la duración de la adquisición, define T = 300 segundos y arranca un cronómetro con tic. Finalmente, configura un buffer circular de 500 muestras (tipo uint8) que servirá para guardar temporalmente los valores leídos antes de procesarlos o graficarlos.
 
   ```MATLAB
-  sp = serialport("COM5",115200);
-    sp.Timeout = 1;
-    flush(sp);
-    fid = fopen("ecg.txt","w");
-   T = 300;     
-    t0 = tic;
-    buf = zeros(1,500,"uint8");
+sp   = serialport("COM5",115200);  
+sp.Timeout = 1;                     
+flush(sp);                          
+fid  = fopen("SAMUEL01.txt","w");   
+T    = 300;                         
+t0   = tic;                         
+buf  = zeros(1,500,"uint8");        
+
 ```
-Para la adquisicion de la señal se utilizo el microcontrolador stm32f103c8t6 el cual se le pogramo la comunicacion serial y el ADC atravez de STM32 CubeIde y Cube MX , en el cual se planteo el Timer (Frecuencia de muestreo (400Hz)),y Baud Rate (115200 bps) el cual es favorece en la calidad de los datos capturados es importante "Es importante configurar la misma cantidad de Baudios en CubeMX y en MATLAB".Despues de esto ya puede pogrmar la captura de la señal en MATLAB atravez de la comunicacion serial
+A través de este bucle realizamos la captura y visualización en tiempo real de la señal: cada vez que llegan nuevas muestras del ECG, se guardan en el archivo y se incorporan al buffer; luego las suavizamos con un promedio móvil (filtro que reemplaza cada punto por el promedio de él y sus próximos puntos) de cinco muestras para eliminar el ruido de alta frecuencia, y finalmente actualizamos la gráfica al instante para ver cómo evoluciona la señal.
 
   ```MATLAB
     while toc(t0)<T
@@ -73,8 +98,6 @@ Para la adquisicion de la señal se utilizo el microcontrolador stm32f103c8t6 el
         drawnow limitrate
     end
 ```
-A través de este bucle realizamos la captura y visualización en tiempo real de la señal: cada vez que llegan nuevas muestras del ECG, se guardan en el archivo y se incorporan al buffer; luego las suavizamos con un promedio móvil (filtro que reemplaza cada punto por el promedio de él y sus próximos puntos) de cinco muestras para eliminar el ruido de alta frecuencia, y finalmente actualizamos la gráfica al instante para ver cómo evoluciona la señal.
-
 
 _ _ _
 ## c. Pre-procesamiento de la señal
