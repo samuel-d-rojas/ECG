@@ -301,7 +301,6 @@ plt.figure(figsize=(15, 10))
 plt.subplot(2, 1, 1)
 img1 = plt.imshow(np.abs(coef_morl), extent=[t[0], t[-1], freqs_morl[-1], freqs_morl[0]],
                  cmap='jet', aspect='auto', vmax=np.abs(coef_morl).max()*0.5)
-plt.colorbar(img1, ax=plt.gca())
 plt.title('Espectrograma HRV - Wavelet Morlet')
 plt.xlabel('Tiempo (s)')
 plt.ylabel('Frecuencia (Hz)')
@@ -314,7 +313,6 @@ plt.legend()
 plt.subplot(2, 1, 2)
 img2 = plt.imshow(np.abs(coef_mexh), extent=[t[0], t[-1], freqs_mexh[-1], freqs_mexh[0]],
                  cmap='jet', aspect='auto', vmax=np.abs(coef_mexh).max()*0.5)
-plt.colorbar(img2, ax=plt.gca(), label='Magnitud')
 plt.title('Espectrograma HRV - Wavelet Mexican Hat')
 plt.xlabel('Tiempo (s)')
 plt.ylabel('Frecuencia (Hz)')
@@ -326,7 +324,7 @@ plt.legend()
 Posteriormente se crea una figura con dos espectrogramas del análisis HRV usando wavelets Morlet y Mexican Hat. En cada subplot se visualizan los coeficientes de la transformada como imágenes en función del tiempo y la frecuencia, destacando las bandas LF (0.04–0.15 Hz) y HF (0.15–0.4 Hz). 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/85288a4a-d71b-4bb5-8d34-c4fd0ae43b86" alt="image" width="500">
+    <img src="https://github.com/user-attachments/assets/00470404-9f21-4080-a864-f4a551f20779" alt="image" width="400">
 </p>
 
 Las gráficas de espectrogramas obtenidas mediante transformadas wavelet (Morlet y Mexican Hat) permiten observar cómo varía la potencia espectral de la señal de intervalos R-R a lo largo del tiempo, en distintas bandas de frecuencia relevantes para el análisis de HRV. Según la teoría, las bandas de interés son:
