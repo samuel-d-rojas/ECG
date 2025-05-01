@@ -190,8 +190,9 @@ plt.ylabel('Intervalo R-R (s)')
 plt.grid()
 ```
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/334731dc-71aa-422c-b9dd-03f9fb394aac" alt="image" width="400">
+    <img src="https://github.com/user-attachments/assets/bc6928f9-4b15-4049-9039-33ae1cca1643" alt="image" width="400">
 </p>
+
 
 Esta parte del código se encarga de graficar la señal basada en los intervalos R-R, que representan las diferencias de tiempo entre los picos R detectados en la señal ECG. La variable t se define como todos los tiempos de los picos R, excepto el primero (t_picos[1:]), ya que este primer pico no corresponde a un verdadero pico R, sino que posiblemente es un artefacto generado por la respuesta inicial del filtro IIR. A continuación, se genera una gráfica donde el eje X representa el instante de tiempo en el que ocurre cada pico R y el eje Y muestra la duración del intervalo R-R correspondiente. Esta visualización permite analizar la variabilidad del ritmo cardíaco a lo largo del tiempo.
 
