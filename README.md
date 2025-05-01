@@ -277,6 +277,57 @@ La desviación estándar obtenida refleja una variabilidad moderada en los inter
 _ _ _
 ## e. Aplicación de transformada Wavelet
 
+ ```python
+avg_RR = np.mean(np.diff(t))  
+fs = 1/avg_RR  
+
+wavelet_morl = 'morl'
+escalas_morl = np.arange(1, 128)
+coef_morl, freqs_morl = pywt.cwt(intervalo, escalas_morl, wavelet_morl, sampling_period=avg_RR)
+freqs_morl = pywt.scale2frequency(wavelet_morl, escalas_morl) / avg_RR
+
+wavelet_mexh = 'mexh'
+escalas_mexh = np.linspace(1, 40, 100)  # Rango diferente para mejor visualización
+coef_mexh, freqs_mexh = pywt.cwt(intervalo, escalas_mexh, wavelet_mexh, sampling_period=avg_RR)
+freqs_mexh = pywt.scale2frequency(wavelet_mexh, escalas_mexh) / avg_RR
+```
+Este fragmento de código realiza un análisis de transformada continua de wavelet (CWT) sobre una señal representada por intervalo, utilizando dos funciones wavelet distintas: Morlet ('morl') y Mexican Hat ('mexh'). Primero, se calcula la frecuencia de muestreo fs como el inverso del promedio de los intervalos RR (avg_RR), derivados de las diferencias entre los tiempos en t. Luego, se definen las escalas para cada wavelet: un rango de 1 a 127 para 'morl' y un rango más fino entre 1 y 40 para 'mexh', con el fin de mejorar la resolución visual. Se aplica la CWT usando pywt.cwt para cada caso, obteniendo los coeficientes de la transformada (coef_morl y coef_mexh) y las frecuencias correspondientes, que se calculan a partir de las escalas usando pywt.scale2frequency y se ajustan según la frecuencia de muestreo.
+
+ ```python
+# Crear figura con subplots
+plt.figure(figsize=(15, 10))
+
+# Primer subplot - Morlet
+plt.subplot(2, 1, 1)
+img1 = plt.imshow(np.abs(coef_morl), extent=[t[0], t[-1], freqs_morl[-1], freqs_morl[0]],
+                 cmap='jet', aspect='auto', vmax=np.abs(coef_morl).max()*0.5)
+plt.colorbar(img1, ax=plt.gca())
+plt.title('Espectrograma HRV - Wavelet Morlet')
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Frecuencia (Hz)')
+plt.axhline(0.04, color='k', linestyle='--')
+plt.axhline(0.15, color='k', linestyle='--', label='LF (0.04-0.15 Hz)')
+plt.axhline(0.4, color='w', linestyle='--', label='HF (0.15-0.4 Hz)')
+plt.legend()
+
+# Segundo subplot - Mexican Hat
+plt.subplot(2, 1, 2)
+img2 = plt.imshow(np.abs(coef_mexh), extent=[t[0], t[-1], freqs_mexh[-1], freqs_mexh[0]],
+                 cmap='jet', aspect='auto', vmax=np.abs(coef_mexh).max()*0.5)
+plt.colorbar(img2, ax=plt.gca(), label='Magnitud')
+plt.title('Espectrograma HRV - Wavelet Mexican Hat')
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Frecuencia (Hz)')
+plt.axhline(0.04, color='k', linestyle='--')
+plt.axhline(0.15, color='k', linestyle='--', label='LF (0.04-0.15 Hz)')
+plt.axhline(0.4, color='w', linestyle='--', label='HF (0.15-0.4 Hz)')
+plt.legend()
+```
+Poateriormente se crea una figura con dos espectrogramas del análisis HRV usando wavelets Morlet y Mexican Hat. En cada subplot se visualizan los coeficientes de la transformada como imágenes en función del tiempo y la frecuencia, destacando las bandas LF (0.04–0.15 Hz) y HF (0.15–0.4 Hz). 
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/85288a4a-d71b-4bb5-8d34-c4fd0ae43b86" alt="image" width="400">
+</p>
 
 _ _ _
 
