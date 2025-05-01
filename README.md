@@ -106,6 +106,9 @@ A través de este bucle realizamos la captura y visualización en tiempo real de
 _ _ _
 ## c. Pre-procesamiento de la señal
 
+Es importante mencionar que todo el procesamiento de la señal que se realiza a partir de ahora se hace completamente con Python.
+
+
 ### Cargar Señal de ECG
 
  ```python
