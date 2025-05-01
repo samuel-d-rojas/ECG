@@ -46,7 +46,11 @@ Al extraer los intervalos R-R y analizarlos con la transformada wavelet, se pued
 _ _ _
 ## b. Adquisición de la señal ECG
 Para adquirir la señal, se empleó el microcontrolador STM32F103C8T6, al cual se le programó el ADC y la comunicación serial mediante STM32CubeIDE y CubeMX. En esta configuración se definió una frecuencia de muestreo de 400 Hz y se estableció un baud rate de 115 200 bps, (En caso de USART el  de Baud Rate valor que debe coincidir exactamente tanto en CubeMX como en MATLAB para garantizar la integridad y sincronía de los datos.)
-$f_{\text{s}} = \frac{f_{\text{TIM3CLK}}}{(\text{Prescaler} + 1) \times (\text{Period} + 1)}$
+
+$
+f_{\text{s}} = \frac{f_{\text{TIM3CLK}}}{(\text{Prescaler} + 1) \times (\text{Period} + 1)}
+$
+
 A través de la Anterior  formula pudimos hallar el prescaler a una frecuencia de muestreo de 400Hz, asumiendo un periodo de 999 y sabiendo que TIM3CLICK es de 72MHz que es el máximo valor con el que trabaja la stm32f103c8t6, y así se pudo programar en STM32 CubeIDE 
   ```C
   htim3.Instance = TIM3;
