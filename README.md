@@ -38,6 +38,7 @@ La HRV se evalúa midiendo las fluctuaciones en los intervalos R-R del electroca
 La Transformada Wavelet es una herramienta matemática que permite analizar señales no estacionarias, como el ECG, descomponiéndolas en componentes de tiempo y frecuencia simultáneamente. A diferencia de la transformada de Fourier, que proporciona una visión global del espectro de frecuencia, la wavelet permite localizar cambios específicos en el tiempo.
 
 Wavelet continua (CWT): ideal para análisis detallado y visualización de espectrogramas.
+
 Wavelet discreta (DWT): adecuada para descomposición jerárquica multirresolución.
 
 Al extraer los intervalos R-R y analizarlos con la transformada wavelet, se puede observar cómo las bandas LF y HF evolucionan en el tiempo. Esto permite detectar de forma precisa transiciones fisiológicas, como cambios de postura, respiración controlada o respuesta al estrés. El uso de wavelets en el análisis de HRV proporciona una caracterización rica y detallada del comportamiento autonómico, permitiendo la evaluación de la dinámica simpático-parasimpática en condiciones fisiológicas o patológicas.
