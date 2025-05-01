@@ -335,6 +335,12 @@ Las gráficas de espectrogramas obtenidas mediante transformadas wavelet (Morlet
 
 * Alta Frecuencia (HF): 0.15 - 0.4 Hz, reflejo directo de la actividad parasimpática (vagal), vinculada a la respiración.
 
+En el espectrograma con wavelet Morlet (parte superior), se observan zonas de alta energía (en rojo y amarillo) que se concentran en diferentes momentos dentro de las bandas LF y HF. Particularmente, se nota que alrededor del segundo 100 al 200, hay una mayor actividad en la banda LF, lo cual sugiere un aumento en la influencia simpática. Más hacia el final del registro (alrededor del segundo 250), la energía se desplaza más a la banda HF, lo que indica un incremento de la modulación parasimpática, posiblemente vinculado a una recuperación o relajación.
+
+En cambio, el espectrograma con wavelet Mexican Hat (parte inferior) ofrece una visualización más localizada en el tiempo, aunque con menor resolución frecuencial. Aquí, las zonas de mayor energía también aparecen entre las bandas LF y HF, pero con menos claridad en la separación. Aun así, se puede identificar que las fluctuaciones se intensifican hacia el final de la grabación, especialmente en la banda HF, reforzando la idea de un aumento en la actividad vagal.
+
+Ambos espectrogramas reflejan una transición dinámica entre la influencia simpática y parasimpática, lo cual es característico de un sistema nervioso autónomo saludable. Estos patrones pueden relacionarse con cambios fisiológicos como esfuerzo, recuperación o respiración profunda, que modulan la frecuencia cardíaca.
+
 _ _ _
 
 ## Bibliografias
