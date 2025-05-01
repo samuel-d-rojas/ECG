@@ -255,8 +255,12 @@ _ _ _
 
 ## Bibliografias
 [1] J. Ortiz y D. Mendoza, "Variabilidad de la frecuencia cardiaca, una herramienta útil," Revista Digital Buenos Aires, vol. 13, no. 121, pp. 35–56, 2008. [En línea]. Disponible en: https://www.efdeportes.com/efd121/variabilidad-de-la-frecuencia-cardiaca-una-herramienta-util.htm
+
 [2] Shaffer, F., & Ginsberg, J. P. (2017). An Overview of Heart Rate Variability Metrics and Norms. Frontiers in Public Health, 5, 258. https://doi.org/10.3389/fpubh.2017.00258
+
 [3] Laborde, S., Mosley, E., & Thayer, J. F. (2017). Heart Rate Variability and Cardiac Vagal Tone in Psychophysiological Research – Recommendations for Experiment Planning, Data Analysis, and Data Reporting. Frontiers in Psychology, 8, 213. https://doi.org/10.3389/fpsyg.2017.00213
+
 [4] Montoya, J. R. A. (2001). La transformada  wavelet. https://www.um.edu.ar/ojs2019/index.php/RUM/article/view/22
+
 [5] Cygankiewicz, I., & Zareba, W. (2013). Heart rate variability. Handbook of clinical neurology, 117, 379-393.
 _ _ _
