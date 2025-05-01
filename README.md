@@ -335,11 +335,15 @@ Las gráficas de espectrogramas obtenidas mediante transformadas wavelet (Morlet
 
 * Alta Frecuencia (HF): 0.15 - 0.4 Hz, reflejo directo de la actividad parasimpática (vagal), vinculada a la respiración.
 
-En el espectrograma con wavelet Morlet (parte superior), se observan zonas de alta energía (en rojo y amarillo) que se concentran en diferentes momentos dentro de las bandas LF y HF. Particularmente, se nota que alrededor del segundo 100 al 200, hay una mayor actividad en la banda LF, lo cual sugiere un aumento en la influencia simpática. Más hacia el final del registro (alrededor del segundo 250), la energía se desplaza más a la banda HF, lo que indica un incremento de la modulación parasimpática, posiblemente vinculado a una recuperación o relajación.
+Las gráficas muestran cómo cambian las frecuencias del ritmo cardíaco a lo largo del tiempo usando dos tipos diferentes de transformadas wavelet: Morlet y Mexican Hat. Estas herramientas nos ayudan a ver con más detalle qué tan activa está la parte del sistema nervioso que controla el corazón, tanto en momentos de calma como de estrés.
 
-En cambio, el espectrograma con wavelet Mexican Hat (parte inferior) ofrece una visualización más localizada en el tiempo, aunque con menor resolución frecuencial. Aquí, las zonas de mayor energía también aparecen entre las bandas LF y HF, pero con menos claridad en la separación. Aun así, se puede identificar que las fluctuaciones se intensifican hacia el final de la grabación, especialmente en la banda HF, reforzando la idea de un aumento en la actividad vagal.
+En la primera gráfica, que usa la transformada Morlet, se puede ver que al principio (los primeros 50 segundos), hay bastante actividad en la banda de baja frecuencia (LF), lo que indica que el cuerpo está combinando señales de alerta y calma. A lo largo del tiempo, esta banda sigue mostrando variaciones, lo que sugiere que hay cambios constantes en cómo el cuerpo está regulando el ritmo del corazón. También se nota que la banda de alta frecuencia (HF), que está relacionada con la respiración y la relajación, tiene momentos de mayor intensidad, sobre todo entre los 50 y los 250 segundos, lo que puede significar que la persona está respirando de forma más profunda o relajada en esos momentos.
 
-Ambos espectrogramas reflejan una transición dinámica entre la influencia simpática y parasimpática, lo cual es característico de un sistema nervioso autónomo saludable. Estos patrones pueden relacionarse con cambios fisiológicos como esfuerzo, recuperación o respiración profunda, que modulan la frecuencia cardíaca.
+En la segunda gráfica, que usa la transformada Mexican Hat, la información se ve un poco más "suavizada". Aquí también se ve actividad en la banda LF, pero no cambia tanto como en la primera gráfica. En cambio, lo más llamativo es que la banda HF se activa con más fuerza hacia el final (después de los 220 segundos), lo que podría indicar que la persona se está relajando más o respirando de forma más controlada.
+
+En resumen, las dos gráficas muestran que hay cambios en el sistema nervioso a lo largo del tiempo, y que tanto la parte que activa al cuerpo (simpático) como la que lo calma (parasimpático) están trabajando. La transformada Morlet muestra mejor los cambios rápidos, mientras que la Mexican Hat ayuda a ver las tendencias generales. Ambos resultados sugieren que hacia el final del registro hay un aumento de relajación o control respiratorio.
+
+
 
 _ _ _
 
