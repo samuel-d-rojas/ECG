@@ -72,13 +72,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 }
 ```
 Después pasamos a Matlab:
-Este bloque en MATLAB prepara la lectura de la señal enviada por el STM32: primero abre el puerto serie "COM5" a 115 200 bps con serialport, luego fija un tiempo de espera de 1 s para las lecturas y limpia cualquier dato residual del buffer con flush. A continuación crea (o sobreescribe) el archivo "SAMUEL01.txt" para almacenar las muestras recibidas. Para controlar la duración de la adquisición, define T = 300 segundos y arranca un cronómetro con tic. Finalmente, configura un buffer circular de 500 muestras (tipo uint8) que servirá para guardar temporalmente los valores leídos antes de procesarlos o graficarlos.
+Este bloque en MATLAB prepara la lectura de la señal enviada por el STM32: primero abre el puerto serie "COM5" a 115 200 bps con serialport, luego fija un tiempo de espera de 1 s para las lecturas y limpia cualquier dato residual del buffer con flush. A continuación crea (o sobreescribe) el archivo "ecg.txt" para almacenar las muestras recibidas. Para controlar la duración de la adquisición, define T = 300 segundos y arranca un cronómetro con tic. Finalmente, configura un buffer circular de 500 muestras (tipo uint8) que servirá para guardar temporalmente los valores leídos antes de procesarlos o graficarlos.
 
   ```MATLAB
 sp   = serialport("COM5",115200);  
 sp.Timeout = 1;                     
 flush(sp);                          
-fid  = fopen("SAMUEL01.txt","w");   
+fid  = fopen("ecg.txt","w");   
 T    = 300;                         
 t0   = tic;                         
 buf  = zeros(1,500,"uint8");        
