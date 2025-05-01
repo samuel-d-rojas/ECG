@@ -29,19 +29,20 @@ En el presente laboratorio, se realiza un estudio detallado de la HRV empleando 
 </p>
 
 ## a. Fundamento teórico
-La variabilidad de la frecuencia cardíaca (HRV) es una medida del intervalo de tiempo entre latidos consecutivos del corazón, conocidos como intervalos R-R. Esta métrica refleja la influencia del sistema nervioso autónomo (SNA) sobre el corazón y se utiliza como un indicador de la regulación autonómica y el equilibrio entre los sistemas simpático y parasimpático.
+La variabilidad de la frecuencia cardíaca (HRV) es una medida del intervalo de tiempo entre latidos consecutivos del corazón, conocidos como intervalos R-R. Esta métrica refleja la influencia del sistema nervioso autónomo (SNA) sobre el corazón y se utiliza como un indicador de la regulación autonómica y el equilibrio entre los sistemas simpático y parasimpático [2].
 ## - Sistema Nervioso Autónomo: Actividad Simpática y Parasimpática
-El sistema nervioso simpático se asocia con respuestas de "lucha o huida", aumentando la frecuencia cardíaca y reduciendo la HRV. Por el contrario, el sistema nervioso parasimpático promueve estados de "reposo y digestión", disminuyendo la frecuencia cardíaca y aumentando la HRV. La HRV, por tanto, sirve como un marcador del tono autonómico y del estado fisiológico del individuo.
+El sistema nervioso simpático se asocia con respuestas de "lucha o huida", aumentando la frecuencia cardíaca y reduciendo la HRV. Por el contrario, el sistema nervioso parasimpático promueve estados de "reposo y digestión", disminuyendo la frecuencia cardíaca y aumentando la HRV. La HRV, por tanto, sirve como un marcador del tono autonómico y del estado fisiológico del individuo [3].
 ## - Variabilidad de la Frecuencia Cardíaca (HRV)
-La HRV se evalúa midiendo las fluctuaciones en los intervalos R-R del electrocardiograma (ECG). El análisis puede realizarse en el dominio del tiempo que calcula parámetros estadísticos como la media y la desviación estándar de los intervalos R-R. Y tambien el el dominio de la frecuencia donde se estudian componentes de baja frecuencia (LF: 0.04–0.15 Hz) relacionadas con ambas ramas del SNA, y de alta frecuencia (HF: 0.15–0.4 Hz), vinculadas principalmente al tono parasimpático.
+La HRV se evalúa midiendo las fluctuaciones en los intervalos R-R del electrocardiograma (ECG). El análisis puede realizarse en el dominio del tiempo que calcula parámetros estadísticos como la media y la desviación estándar de los intervalos R-R. Y tambien el el dominio de la frecuencia donde se estudian componentes de baja frecuencia (LF: 0.04–0.15 Hz) relacionadas con ambas ramas del SNA, y de alta frecuencia (HF: 0.15–0.4 Hz), vinculadas principalmente al tono parasimpático [5].
 ## - Transformada Wavelet
-La Transformada Wavelet es una herramienta matemática que permite analizar señales no estacionarias, como el ECG, descomponiéndolas en componentes de tiempo y frecuencia simultáneamente. A diferencia de la transformada de Fourier, que proporciona una visión global del espectro de frecuencia, la wavelet permite localizar cambios específicos en el tiempo.
+La Transformada Wavelet es una herramienta matemática que permite analizar señales no estacionarias, como el ECG, descomponiéndolas en componentes de tiempo y frecuencia simultáneamente. A diferencia de la transformada de Fourier, que proporciona una visión global del espectro de frecuencia, la wavelet permite localizar cambios específicos en el tiempo. Tiene dos enfoques: La Wavelet continua (CWT) que es ideal para análisis detallado y visualización de espectrogramas, y la Wavelet discreta (DWT): adecuada para descomposición jerárquica multirresolución [4].
+Para el análisis de HRV, es importante elegir una función wavelet que tenga buena localización tanto en tiempo como en frecuencia como: 
 
-Wavelet continua (CWT): ideal para análisis detallado y visualización de espectrogramas.
+Wavelet Morlet: Es útil para analizar componentes oscilatorios de frecuencia específica, permitiendo una excelente resolución en frecuencia. Es adecuada para estudiar cómo cambian los patrones de oscilación a lo largo del tiempo en la señal HRV.
 
-Wavelet discreta (DWT): adecuada para descomposición jerárquica multirresolución.
+Wavelet Mexican Hat (Ricker): Es eficaz para detectar picos y transiciones abruptas dentro de la señal, como los picos R en un ECG. Su forma permite capturar con claridad los cambios puntuales de amplitud en señales fisiológicas.
 
-Al extraer los intervalos R-R y analizarlos con la transformada wavelet, se puede observar cómo las bandas LF y HF evolucionan en el tiempo. Esto permite detectar de forma precisa transiciones fisiológicas, como cambios de postura, respiración controlada o respuesta al estrés. El uso de wavelets en el análisis de HRV proporciona una caracterización rica y detallada del comportamiento autonómico, permitiendo la evaluación de la dinámica simpático-parasimpática en condiciones fisiológicas o patológicas.
+Al extraer los intervalos R-R y analizarlos con la transformada wavelet, se puede observar cómo las bandas LF y HF evolucionan en el tiempo. Esto permite detectar de forma precisa transiciones fisiológicas, como cambios de postura, respiración controlada o respuesta al estrés. El uso de wavelets en el análisis de HRV proporciona una caracterización rica y detallada del comportamiento autonómico, permitiendo la evaluación de la dinámica simpático-parasimpática en condiciones fisiológicas o patológicas [4].
 _ _ _
 ## b. Adquisición de la señal ECG
 
@@ -254,5 +255,8 @@ _ _ _
 
 ## Bibliografias
 [1] J. Ortiz y D. Mendoza, "Variabilidad de la frecuencia cardiaca, una herramienta útil," Revista Digital Buenos Aires, vol. 13, no. 121, pp. 35–56, 2008. [En línea]. Disponible en: https://www.efdeportes.com/efd121/variabilidad-de-la-frecuencia-cardiaca-una-herramienta-util.htm
-
+[2] Shaffer, F., & Ginsberg, J. P. (2017). An Overview of Heart Rate Variability Metrics and Norms. Frontiers in Public Health, 5, 258. https://doi.org/10.3389/fpubh.2017.00258
+[3] Laborde, S., Mosley, E., & Thayer, J. F. (2017). Heart Rate Variability and Cardiac Vagal Tone in Psychophysiological Research – Recommendations for Experiment Planning, Data Analysis, and Data Reporting. Frontiers in Psychology, 8, 213. https://doi.org/10.3389/fpsyg.2017.00213
+[4] Montoya, J. R. A. (2001). La transformada  wavelet. https://www.um.edu.ar/ojs2019/index.php/RUM/article/view/22
+[5] Cygankiewicz, I., & Zareba, W. (2013). Heart rate variability. Handbook of clinical neurology, 117, 379-393.
 _ _ _
